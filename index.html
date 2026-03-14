@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Chadicus Games</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="styles.css"/>
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav>
+    <div class="nav-inner">
+      <a href="#" class="nav-logo">Chadicus<span>.</span>Games</a>
+      <ul class="nav-links">
+        <li><a href="#games">Games</a></li>
+        <li><a href="#blog">Dev Log</a></li>
+        <li><a href="https://github.com/chadicusgames" target="_blank">GitHub</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-inner">
+      <p class="hero-eyebrow fade-up">GAME AND WEB DEVELOPMENT PROJECTS</p>
+      <h1 class="fade-up">Welcome To <br><em>Chadicus Games</em></h1>
+      <p class="hero-sub fade-up">Howdy! I am a designer and creative in the process of learning web and game development. These are my personal passion projects!</p>
+      <a href="#games" class="hero-cta fade-up">
+        View My Projects!
+        <svg viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M1 7h12M7 1l6 6-6 6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </a>
+    </div>
+    <div class="hero-scroll">
+      <div class="scroll-line"></div>
+      Scroll
+    </div>
+  </section>
+
+  <!-- GAMES -->
+  <section id="games">
+    <div class="section-inner">
+      <div class="section-header fade-up">
+        <p class="section-label">Portfolio</p>
+        <h2 class="section-title">Games and Websites I've Made</h2>
+      </div>
+      <div class="games-grid">
+
+        <!-- Freefoem TTRPG -->
+        <a href="https://chadicusgames.github.io/FreeformTTRPG-Wiki/" class="game-card fade-up">
+          <div class="game-thumb">
+            <div class="game-thumb-placeholder">🎮</div>
+            <span class="game-tag">In Progress</span>
+          </div>
+          <div class="game-body">
+            <h3 class="game-title">Freeform TTRPG</h3>
+            <p class="game-desc">A Table Top Game ruleset meant to introduce new players to Table Top Gaming. It is a flexible rules light system that adapts to any setting and genre.</p>
+            <div class="game-meta">
+              <span class="chip accent">Table Top Game</span>
+              <span class="chip">obsidian/quest</span>
+              <span class="chip">2024</span>
+            </div>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- BLOG -->
+  <section id="blog">
+    <div class="section-inner">
+      <div class="section-header fade-up">
+        <p class="section-label">Dev Log</p>
+        <h2 class="section-title">About My Process!</h2>
+      </div>
+      <div class="blog-grid">
+
+        <a href="#" class="blog-card fade-up">
+          <p class="blog-date">March 10, 2026</p>
+          <h3 class="blog-title">How I designed the core loop for Game Title Two</h3>
+          <p class="blog-excerpt">A behind-the-scenes look at how the main mechanic evolved from a rough idea into something that actually feels good to play.</p>
+          <span class="blog-read">Read post →</span>
+        </a>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-inner">
+      <a href="#" class="footer-logo">Your<span>.</span>Name</a>
+      <div class="footer-links">
+        <a href="https://github.com/yourusername" target="_blank">GitHub</a>
+        <a href="https://twitter.com/yourhandle" target="_blank">Twitter / X</a>
+        <a href="https://itch.io/yourprofile" target="_blank">itch.io</a>
+      </div>
+      <p class="footer-copy">© 2026 Your Name. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script>
+    // Fade-in on scroll
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((e, i) => {
+        if (e.isIntersecting) {
+          setTimeout(() => e.target.classList.add('visible'), i * 80);
+          observer.unobserve(e.target);
+        }
+      });
+    }, { threshold: 0.12 });
+
+    document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
+  </script>
+
+</body>
+</html>
